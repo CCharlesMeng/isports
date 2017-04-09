@@ -62,16 +62,16 @@
             <div class="activity-holder">
                 <!--上面的那三个按钮-->
                 <div class="activity-btn-holder">
-                    <button class="activity-est">最新</button>
-                    <button class="activity-est">热门</button>
-                    <button class="activity-new">添加活动</button>
+                    <button class="activity-est activity-btn-selected" id="newestBtn" onclick="activeBtn(this)" active="true">最新</button>
+                    <button class="activity-est activity-btn" id="hotestBtn" onclick="activeBtn(this)" active="false">热门</button>
+                    <button class="activity-new activity-btn" id="addBtn">+ 添加活动</button>
                 </div>
                 <!-- 进入到一个一个活动的部分-->
                 <!-- per-activity 是每一个活动-->
                 <div class="per-activity">
                     <div class="activity-head-holder">
                         <h1>操场见！</h1>
-                        <h4><span>58</span> 人参与</h4>
+                        <h4><span>58/100</span> 人参与</h4>
                     </div>
                     <div class="activity-time-address-holder">
                         <h1><i class="fa-fa fa-clock-o"></i>3月2日</h1>
@@ -96,8 +96,8 @@
                         <p>"好雨知时节，当春乃发生"，周末是难得的晴天，去操场踢球、打球，一起运动吧！</p>
                     </div>
                     <div class="per-activity-footer">
-                        <h5 class="per-activity-footer-h5-none">加入他们</h5>
-                        <i class="fa-fa fa-heart-o-grey" onmouseover="changeToColor(this)" onmouseout="changeToGrey(this)" id="test"></i>
+                        <h5 class="per-activity-footer-h5-none text-hide" id="text1">加入他们</h5>
+                        <i class="fa-fa fa-heart-o-grey" onmouseover="changeToColor(this)" onmouseout="changeToGrey(this)" id="1"></i>
                            <!--onmouseover="changeToColor(this)" onmouseout="changeToGrey(this)" -->
                         <p>评论</p>
                     </div>
