@@ -217,7 +217,7 @@
     var series = [];
     [['南京', NJData]].forEach(function (item, i) {
         series.push({
-                name: item[0] + ' Top10',
+                name: '从'+item[0] + ' 去拉萨',
                 type: 'lines',
                 zlevel: 1,
                 effect: {
@@ -237,7 +237,7 @@
                 data: convertData(item[1])
             },
             {
-                name: item[0] + ' Top10',
+                name: '从'+item[0] + ' 去拉萨',
                 type: 'lines',
                 zlevel: 2,
                 symbol: ['none', 'arrow'],
@@ -253,7 +253,7 @@
                 data: convertData(item[1])
             },
             {
-                name: item[0] + ' Top10',
+                name: '从'+item[0] + ' 去拉萨',
                 type: 'effectScatter',
                 coordinateSystem: 'geo',
                 zlevel: 2,
