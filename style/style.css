@@ -10,16 +10,17 @@ p,
 img,
 textarea,
 input,
-label{
+label {
     display: block;
     position: relative;
 }
+
 /*
 输入框
  */
 .normal-input {
 
-    border:  solid #ebebeb 1px;
+    border: solid #ebebeb 1px;
     padding-left: 8px;
     font-size: 14px;
     font-weight: 300;
@@ -31,44 +32,197 @@ label{
     outline: none;
 }
 
-.normal-input:focus{
+.normal-input:focus {
     box-shadow: 0 0 7px #79BD9A;
     -webkit-box-shadow: 0 0 7px #79BD9A;
     -moz-box-shadow: 0 0 7px #79BD9A;
 }
 
-.normal-button-green {
+.normal-button {
+    position: relative;
+    padding: 1px 5px 1px 5px;
     border: none;
     outline: none;
-    background-color: #79BD9A;
     text-align: center;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 300;
-    color: whitesmoke;
 }
 
-.normal-button-green:hover {
-    background-color: #A8DBA8;
+.normal-select {
+
+    border: solid #ebebeb 1px;
+    padding-left: 8px;
+    font-size: 14px;
+    font-weight: 300;
+
+    transition: all 0.30s ease-in-out;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    border-radius: 2px;
+    outline: none;
 }
 
-.normal-button-green:active {
+.normal-select:focus {
+    box-shadow: 0 0 7px #79BD9A;
+    -webkit-box-shadow: 0 0 7px #79BD9A;
+    -moz-box-shadow: 0 0 7px #79BD9A;
+}
+
+.green-btn{
+    border: solid 1px #79BD9A;
+    background-color: #79BD9A;
+    color: white;
+    transition: all 0.30s ease-in-out;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+}
+
+.green-btn:hover {
+    /*color: #99cd99;*/
+    border: solid 1px #84cca7;
+    background-color: #84cca7;
+    color: #45ab56;
+}
+
+.green-btn:active {
+    border: solid 1px #99cd99;
     background-color: #99cd99;
 }
 
-.small-icon{
-    font-size:15px;
+
+.green-border-btn{
+    border: solid 1px #79BD9A;
+    background-color: rgba(0,0,0,0);
+    color: #79BD9A;
+    transition: all 0.30s ease-in-out;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
 }
 
-.navigation-frame{
+.green-border-btn:hover{
+    background-color: #79BD9A;
+    color: white;
+}
+
+.green-border-btn:active{
+    background-color: #99cd99;
+    color: white;
+}
+
+.orange-btn{
+    border: solid 1px #DE7E73;
+    background-color: #DE7E73;
+    color: white;
+    transition: all 0.30s ease-in-out;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+}
+
+.orange-btn:hover {
+    /*color: #99cd99;*/
+    border: solid 1px #de815f;
+    background-color: #de815f;
+    color: #ffb1a7;
+}
+
+.orange-btn:active {
+    /*border: solid 1px #ffb1a7;*/
+    /*background-color: #ffb1a7;*/
+    color: white;
+}
+
+.orange-border-btn{
+    border: solid 1px #DE7E73;
+    background-color: rgba(0,0,0,0);
+    color: #DE7E73;
+    transition: all 0.30s ease-in-out;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+}
+
+.orange-border-btn:hover {
+    /*color: #99cd99;*/
+    border: solid 1px #DE7E73;
+    background-color: #DE7E73;
+    color: white;
+}
+
+.orange-border-btn:active {
+    border: solid 1px #de815f;
+    background-color: #de815f;
+    color: #ffb1a7;
+}
+
+.normal-p {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.normal-tag {
+    width: 30px;
+    height: 24px;
+    border-radius: 0 7px 7px 0;
+    background-color: rgba(128, 128, 128, 0.50);
+    color: white;
+    font-size: 12px;
+    padding-left: 12px;
+    line-height: 24px;
+    transition: all 0.30s ease-in-out;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+}
+
+.normal-tag::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 0;
+    width: 0px;
+    height: 0px;
+    /*border-radius: 5px;*/
+    border-style: solid;
+    border-width: 12px 10px 12px 0px;
+    border-color: rgba(0, 0, 0, 0) rgba(128, 128, 128, 0.50) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+    transition: all 0.30s ease-in-out;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+}
+
+.normal-tag::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.normal-tag:hover {
+    cursor: pointer;
+    background-color: #99cd99;
+}
+
+.normal-tag:hover::before{
+    border-right-color: #99cd99;
+
+}
+
+.small-icon {
+    font-size: 15px;
+}
+
+.navigation-frame {
     z-index: 999;
     /*background-color: green;*/
 }
 
-.element-frame{
+.element-frame {
     border: none;
 }
 
-.all-elements{
+.all-elements {
     position: absolute;
     top: 7%;
     left: 0px;
@@ -78,7 +232,7 @@ label{
     overflow-x: hidden;
 }
 
-.footer{
+.footer {
     position: relative;
     float: left;
     top: 10%;
@@ -89,7 +243,7 @@ label{
     /*background-color: green;*/
 }
 
-.footer h1{
+.footer h1 {
     position: relative;
     float: left;
     left: 0;
@@ -113,7 +267,7 @@ label{
     clear: both;
 }
 
-.main-logo{
+.main-logo {
     background-image: url(../images/isports-white.png);
     background-size: 90%;
     line-height: 50px;
@@ -124,48 +278,47 @@ label{
 菜单栏的小三角   one 是第一项下面的...以此类推
 */
 
-.triangle{
-    border-color: #79BD9A rgba(0,0,0,0) whitesmoke rgba(0,0,0,0);
-    border-style:solid;
+.triangle {
+    border-color: #79BD9A rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+    border-style: solid;
     border-width: 10px 20px 0px 20px;
     height: 0;
     width: 0;
 
 }
 
-.menu-triangle{
+.menu-triangle {
     position: absolute;
-    top:7%;
+    top: 7%;
     z-index: 1;
-    /*background-color: green;*/
 }
 
-.menu-triangle-one{
+.menu-triangle-one {
     left: 29.5%;
 }
 
-.menu-triangle-two{
+.menu-triangle-two {
     left: 39.5%;
 }
 
-.menu-triangle-three{
+.menu-triangle-three {
     left: 49.5%;
 }
 
-.menu-triangle-four{
+.menu-triangle-four {
     left: 59.5%;
 }
 
-.menu-triangle-five{
+.menu-triangle-five {
     left: 69.5%;
 }
 
-.big-icon{
+.big-icon {
     line-height: 50px;
-    color:white;
+    color: white;
 }
 
-.navigation-right-icon{
+.navigation-right-icon {
     position: relative;
     float: right;
     right: 5%;
@@ -173,39 +326,39 @@ label{
     /*background-color: grey;*/
 }
 
-.navigation-right-icon i{
+.navigation-right-icon i {
     position: relative;
     float: right;
     font-size: 22px;
-    margin-right:8%;
+    margin-right: 8%;
     line-height: 50px;
 }
 
-.navigation-right-icon i:hover{
-    color:#ED9282;
+.navigation-right-icon i:hover {
+    color: #ED9282;
 }
 
 /*
 activities
 */
 
-.activity-holder{
+.activity-holder {
     position: relative;
     float: left;
     left: 20%;
-    top:6%;
+    top: 6%;
     width: 60%;
     padding: 30px 2% 30px 2%;
     /*height: 200%;*/
     margin-bottom: 5%;
-    border:  solid #eeeeee 1px;
+    border: solid #eeeeee 1px;
     background-color: white;
 }
 
-.activity-btn-holder{
+.activity-btn-holder {
     position: relative;
     float: left;
-    top:5%;
+    top: 5%;
     width: 92%;
     margin-left: 4%;
     /*background-color: green;*/
@@ -214,7 +367,7 @@ activities
     /*border:  solid #eeeeee 1px;*/
 }
 
-.activity-est{
+.activity-est {
     float: left;
     left: 0;
     width: 10%;
@@ -222,7 +375,7 @@ activities
     background-color: white;
 }
 
-.activity-new{
+.activity-new {
     float: right;
     top: 25%;
     right: 0;
@@ -231,7 +384,7 @@ activities
     /*margin-right: 3%;*/
 }
 
-.activity-btn{
+.activity-btn {
     position: relative;
     top: 20%;
     height: 60%;
@@ -243,15 +396,15 @@ activities
     /*background-color: green;*/
 }
 
-.activity-btn:hover{
+.activity-btn:hover {
     font-weight: 700;
 }
 
-.activity-btn:active{
+.activity-btn:active {
     font-weight: 700;
 }
 
-.activity-btn-selected{
+.activity-btn-selected {
     position: relative;
     top: 20%;
     height: 60%;
@@ -263,60 +416,64 @@ activities
     background-color: #DE7E73;
 }
 
-.per-activity{
+.per-activity {
     position: relative;
     float: left;
-    top:5%;
+    top: 5%;
     width: 44%;
     margin-left: 4%;
     margin-bottom: 4%;
     height: 300px;
-    border:  solid #eeeeee 1px;
+    border: solid #eeeeee 1px;
 }
 
-.activity-head-holder{
+.activity-in {
+    background-color: rgba(192, 255, 192, 0.35);
+}
+
+.activity-head-holder {
     position: relative;
     float: left;
-    top:5%;
+    top: 5%;
     width: 44%;
     padding-left: 5%;
     /*background-color: #88C366;*/
 }
 
-.activity-head-holder h1{
+.activity-head-holder h1 {
     font-size: 19px;
     font-weight: 300;
     line-height: 25px;
 }
 
-.activity-head-holder h4{
+.activity-head-holder h4 {
     font-size: 14px;
     font-weight: 300;
     line-height: 25px;
     color: grey;
 }
 
-.activity-time-address-holder{
+.activity-time-address-holder {
     position: relative;
     float: right;
-    top:5%;
+    top: 5%;
     width: 30%;
     padding-right: 5%;
     text-align: left;
     /*background-color: #88C366;*/
 }
 
-.activity-time-address-holder h1{
+.activity-time-address-holder h1 {
     font-size: 14px;
     font-weight: 300;
     line-height: 25px;
     color: grey;
 }
 
-.photo-holder{
+.photo-holder {
     position: relative;
     float: left;
-    top:5%;
+    top: 5%;
     left: 5%;
     width: 90%;
     margin-top: 10px;
@@ -324,26 +481,26 @@ activities
     /*background-color: green;*/
 }
 
-.photo-item{
+.photo-item {
     position: relative;
     float: left;
-    top:5%;
+    top: 5%;
     /*left: 5%;*/
     margin-right: 0.3%;
     width: 33%;
 }
 
-.icover{
+.icover {
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color:#A8DBA8;
+    background-color: #A8DBA8;
     opacity: 0;
 }
 
-.icover:hover{
+.icover:hover {
     opacity: 0.3;
     transition: .3s;
     -webkit-transition: .3s;
@@ -352,13 +509,13 @@ activities
     -ms-transition: .3s;
 }
 
-.photo-item img{
+.photo-item img {
     float: left;
     left: 0%;
     width: 100%;
 }
 
-.activity-description{
+.activity-description {
     position: relative;
     float: left;
     top: 5%;
@@ -370,7 +527,7 @@ activities
     /*background-color: green;*/
 }
 
-.activity-description p{
+.activity-description p {
     width: 100%;
     padding-left: 5px;
     padding-right: 5px;
@@ -379,7 +536,7 @@ activities
     line-height: 23px;
 }
 
-.per-activity-footer{
+.per-activity-footer {
     position: relative;
     float: left;
     top: 8%;
@@ -390,7 +547,7 @@ activities
     /*background-color: green;*/
 }
 
-.per-activity-footer i{
+.per-activity-footer i {
     font-size: 22px;
     position: relative;
     float: right;
@@ -402,7 +559,7 @@ activities
     -moz-transition: 2s;
 }
 
-.per-activity-footer i:hover{
+.per-activity-footer i:hover {
     /*right: 9%;*/
     /*color: #bc0000;*/
     transition: 2s;
@@ -410,34 +567,41 @@ activities
     /*-ms-transition: 2s;*/
     -moz-transition: 2s;
     /*background-color: #88C366;*/
-    animation:mymove 2s 1;
-    -webkit-animation:mymove 2s 1; /*Safari and Chrome*/
+    animation: mymove 2s 1;
+    -webkit-animation: mymove 2s 1; /*Safari and Chrome*/
 }
 
 /*
   为了让心动起来
 */
-@keyframes mymove
-{
-    from {right:2%;}
-    to {right:9%;}
+@keyframes mymove {
+    from {
+        right: 2%;
+    }
+    to {
+        right: 9%;
+    }
 }
 
 @-webkit-keyframes mymove /*Safari and Chrome*/
 {
-    from {right:2%;}
-    to {right:9%;}
+    from {
+        right: 2%;
+    }
+    to {
+        right: 9%;
+    }
 }
 
-.text-hide{
+.text-hide {
     display: none;
 }
 
-.text-show{
+.text-show {
     display: inline;
 }
 
-.per-activity-footer p{
+.per-activity-footer p {
     font-size: 12px;
     line-height: 22px;
     position: relative;
@@ -447,7 +611,7 @@ activities
     /*background-color: green;*/
 }
 
-.per-activity-footer-h5-none{
+.per-activity-footer-h5-none {
     font-size: 11px;
     font-weight: 400;
     line-height: 22px;
@@ -458,7 +622,7 @@ activities
     /*display: none;*/
 }
 
-.per-activity-footer-h5-show{
+.per-activity-footer-h5-show {
     font-size: 11px;
     font-weight: 400;
     line-height: 22px;
@@ -469,42 +633,42 @@ activities
     display: none;
 }
 
-.hover-change{/*空属性，只是为了方便使用jquery的选择器*/}
+.hover-change { /*空属性，只是为了方便使用jquery的选择器*/
+}
 
-
-.login-holder{
+.login-holder {
     position: relative;
     float: left;
-    top:10%;
+    top: 10%;
     left: 15%;
     width: 70%;
     /*padding: 30px 2% 30px 2%;*/
     height: 68%;
     margin-bottom: 5%;
     margin-left: 0;
-    border:  solid #eeeeee 1px;
+    border: solid #eeeeee 1px;
     background-color: white;
 }
 
-.login-left{
-     position: relative;
-     float: left;
-     left: 0;
-     width: 61.8%;
-     height: 100%;
-     border-right: inset #eeeeee 1px;
-     background: url("../images/mainPoster.png");
-     background-size: 100%;
-     background-repeat: no-repeat;
-     /*background-color: green;*/
- }
+.login-left {
+    position: relative;
+    float: left;
+    left: 0;
+    width: 61.8%;
+    height: 100%;
+    border-right: inset #eeeeee 1px;
+    background: url("../images/mainPoster.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    /*background-color: green;*/
+}
 
 /*.login-left img{*/
-    /*left: -10%;*/
-    /*height: 100%;*/
+/*left: -10%;*/
+/*height: 100%;*/
 /*}*/
 
-.login-right{
+.login-right {
     position: relative;
     float: right;
     right: 0;
@@ -513,28 +677,28 @@ activities
     /*background-color: teal;*/
 }
 
-.login-logo{
+.login-logo {
     position: relative;
     float: left;
-    top:18%;
+    top: 18%;
     left: 18%;
     width: 60%;
     /*background-color: gold;*/
 }
 
-.login-main-logo{
+.login-main-logo {
     left: 34%;
 }
 
 .login-right input {
     position: relative;
     float: left;
-    top:35%;
+    top: 35%;
     left: 12%;
     width: 70%;
     height: 7%;
     margin-top: 25px;
-    border:  solid #ebebeb 1px;
+    border: solid #ebebeb 1px;
     padding-left: 8px;
     padding-right: 8px;
     font-size: 14px;
@@ -547,7 +711,7 @@ activities
     outline: none;
 }
 
-.login-right input:focus{
+.login-right input:focus {
     box-shadow: 0 0 7px #79BD9A;
     -webkit-box-shadow: 0 0 7px #79BD9A;
     -moz-box-shadow: 0 0 7px #79BD9A;
@@ -556,7 +720,7 @@ activities
 .login-right button {
     position: relative;
     float: left;
-    top:35%;
+    top: 35%;
     left: 12%;
     width: 76%;
     height: 8%;
@@ -578,10 +742,10 @@ activities
     background-color: #99cd99;
 }
 
-.login-under-input{
+.login-under-input {
     position: relative;
     float: left;
-    top:40%;
+    top: 40%;
     left: 10%;
     width: 80%;
     height: 7%;

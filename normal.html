@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="author" content="Script Tutorials" />
+        <title>常用到的组件-isports</title>
+
+        <link href="style/main.css" rel="stylesheet" type="text/css" />
+        <link href="style/style.css" rel="stylesheet" type="text/css" />
+        <link href="style/material-icons.css" rel="stylesheet" type="text/css" />
+        <link href="style/font-awesome.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+        <script type="text/javascript" src="js/activity.js"></script>
+
+
+    </head>
+    <body>
+        <div class="container" id="navigationBar" role="navigation">
+            <ul class="menu">
+                <img src="images/isports-white.png">
+                <li class="active"><a href="activities.html">活动</a>
+                    <ul class="submenu">
+                        <li><a href="activities.html">所有活动</a></li>
+                        <li><a href="#">发布活动</a></li>
+                        <li><a href="#">我的活动</a></li>
+                        <li><a href="normal.html">常用组件</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">数据</a>
+                    <ul class="submenu">
+                        <li><a href="#">我的数据</a></li>
+                        <li><a href="#">好友PK</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">好友</a>
+                <ul class="submenu">
+                    <li><a href="#">我的好友</a></li>
+                    <li><a href="#">寻找朋友</a></li>
+                </ul>
+                </li>
+                <li><a href="#">我的</a>
+                    <ul class="submenu">
+                        <li><a href="#">我的信息</a></li>
+                        <li><a href="#">个人设置</a></li>
+                    </ul>
+                </li>
+                <span class="big-icon navigation-right-icon">
+                    <i class="material-icons" onclick="logout()">exit_to_app</i>
+                    <i class="fa-middle fa-bell"></i>
+                </span>
+            </ul>
+        </div>
+        <!--小三角，勿删-->
+        <div class="menu-triangle menu-triangle-one triangle"></div>
+        <!--小三角结束，正文开始-->
+
+        <div class="all-elements">
+            <div class="activity-holder">
+                <!--上面的那三个按钮-->
+                <div class="activity-btn-holder">
+                    <button class="activity-est activity-btn-selected" id="newestBtn" onclick="activeBtn(this)" active="true">头部按钮1</button>
+                    <button class="activity-est activity-btn" id="hotestBtn" onclick="activeBtn(this)" active="false">头部按钮2</button>
+                    <button class="activity-new activity-btn" id="addBtn">+ 发布活动</button>
+                </div>
+                <!-- 进入到一个一个活动的部分-->
+                <!-- per-activity 是每一个活动-->
+                <div class="per-activity">
+                    <div class="activity-head-holder">
+                        <h1>一级标题</h1>
+                        <h4>二级标题</h4>
+                    </div>
+                    <div class="activity-time-address-holder">
+                        <h1><i class="fa-fa fa-clock-o"></i>时间icon</h1>
+                        <h1><i class="material-icons small-icon">location_on</i>地点icon</h1>
+                    </div>
+
+                    <div class="photo-holder">
+                        <span class="photo-item">
+                             <img src="images/basketball.png" alt="img的alt是要写的">
+                             <span class="icover"></span>
+                        </span>
+                        <span class="photo-item">
+                             <img src="images/soccer.png">
+                             <span class="icover"></span>
+                        </span>
+                        <span class="photo-item">
+                             <img src="images/tennis.png">
+                            <span class="icover"></span>
+                        </span>
+                    </div>
+                    <div class="activity-description">
+                        <p class="normal-p">普通文字段落</p>
+                    </div>
+                    <div class="per-activity-footer">
+                        <a class="normal-tag">标签</a>
+                    </div>
+                </div>
+                <div class="per-activity">
+                    <input class="normal-input" style="left: 15%;top: 10%; width: 70%;height: 26px;" placeholder="输入框">
+                    <select class="normal-select" style="left: 15%; margin-top: 50px; width: 70%;height: 26px;">
+                        <option>111</option>
+                        <option>222</option>
+                    </select>
+                    <br/>
+                    <button class="normal-button green-btn" style="left: 15%; margin-top: 50px">绿色按钮</button>
+                    <button class="normal-button green-border-btn" style="left: 15%; margin-top: 50px">空心绿按钮</button>
+                    <button class="normal-button orange-btn" style="left: 15%; margin-top: 50px">橙色按钮</button>
+                    <button class="normal-button orange-border-btn" style="left: 15%; margin-top: 50px">空心橙按钮</button>
+                </div>
+
+            </div>
+            <!--footer 每个界面都用到-->
+            <div class="footer">
+                <!--分割线-->
+                <div class="decoration-center"></div>
+                <h1>
+                    Copyright &copy; 2016 - 2017 Isports. All Rights Reserved.
+                </h1>
+            </div>
+        </div>
+
+
+    </body>
+</html>
