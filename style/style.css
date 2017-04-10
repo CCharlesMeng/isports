@@ -37,6 +37,24 @@ label{
     -moz-box-shadow: 0 0 7px #79BD9A;
 }
 
+.normal-button-green {
+    border: none;
+    outline: none;
+    background-color: #79BD9A;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 300;
+    color: whitesmoke;
+}
+
+.normal-button-green:hover {
+    background-color: #A8DBA8;
+}
+
+.normal-button-green:active {
+    background-color: #99cd99;
+}
+
 .small-icon{
     font-size:15px;
 }
@@ -457,11 +475,12 @@ activities
 .login-holder{
     position: relative;
     float: left;
-    top:6%;
+    top:10%;
     left: 15%;
     width: 70%;
     /*padding: 30px 2% 30px 2%;*/
-    height: 80%;
+    height: 68%;
+    margin-bottom: 5%;
     margin-left: 0;
     border:  solid #eeeeee 1px;
     background-color: white;
@@ -474,8 +493,16 @@ activities
      width: 61.8%;
      height: 100%;
      border-right: inset #eeeeee 1px;
+     background: url("../images/mainPoster.png");
+     background-size: 100%;
+     background-repeat: no-repeat;
      /*background-color: green;*/
  }
+
+/*.login-left img{*/
+    /*left: -10%;*/
+    /*height: 100%;*/
+/*}*/
 
 .login-right{
     position: relative;
@@ -486,10 +513,23 @@ activities
     /*background-color: teal;*/
 }
 
+.login-logo{
+    position: relative;
+    float: left;
+    top:18%;
+    left: 18%;
+    width: 60%;
+    /*background-color: gold;*/
+}
+
+.login-main-logo{
+    left: 34%;
+}
+
 .login-right input {
     position: relative;
     float: left;
-    top:40%;
+    top:35%;
     left: 12%;
     width: 70%;
     height: 7%;
@@ -516,7 +556,7 @@ activities
 .login-right button {
     position: relative;
     float: left;
-    top:40%;
+    top:35%;
     left: 12%;
     width: 76%;
     height: 8%;
