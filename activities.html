@@ -4,7 +4,6 @@
         <meta charset="utf-8" />
         <meta name="author" content="Script Tutorials" />
         <title>活动-isports</title>
-
         <link href="style/main.css" rel="stylesheet" type="text/css" />
         <link href="style/style.css" rel="stylesheet" type="text/css" />
         <link href="style/material-icons.css" rel="stylesheet" type="text/css" />
@@ -14,97 +13,95 @@
         <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
         <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
         <script type="text/javascript" src="js/activity.js"></script>
-
-
     </head>
     <body>
         <div class="container" id="navigationBar" role="navigation">
-            <ul class="menu">
-                <img src="images/isports-white.png">
-                <li class="active"><a href="activities.html">活动</a>
-                    <ul class="submenu">
-                        <li><a href="activities.html">所有活动</a></li>
-                        <li><a href="#">发布活动</a></li>
-                        <li><a href="#">我的活动</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">数据</a>
-                    <ul class="submenu">
-                        <li><a href="#">我的数据</a></li>
-                        <li><a href="#">好友PK</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">好友</a>
-                <ul class="submenu">
-                    <li><a href="#">我的好友</a></li>
-                    <li><a href="#">寻找朋友</a></li>
-                </ul>
-                </li>
-                <li><a href="#">我的</a>
-                    <ul class="submenu">
-                        <li><a href="#">我的信息</a></li>
-                        <li><a href="#">个人设置</a></li>
-                    </ul>
-                </li>
-                <span class="big-icon navigation-right-icon">
+                <ul class="menu">
+                    <img src="images/isports-white.png">
+                    <li class="active"><a href="activities.html">活动</a>
+                        <ul class="submenu">
+                            <li><a href="activities.html">所有活动</a></li>
+                            <li><a href="#">发布活动</a></li>
+                            <li><a href="#">我的活动</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">数据</a>
+                        <ul class="submenu">
+                            <li><a href="#">我的数据</a></li>
+                            <li><a href="#">好友PK</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">好友</a>
+                        <ul class="submenu">
+                            <li><a href="#">我的好友</a></li>
+                            <li><a href="#">寻找朋友</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">我的</a>
+                        <ul class="submenu">
+                            <li><a href="#">我的信息</a></li>
+                            <li><a href="#">个人设置</a></li>
+                        </ul>
+                    </li>
+                    <span class="big-icon navigation-right-icon">
                     <i class="material-icons" onclick="logout()">exit_to_app</i>
                     <i class="fa-middle fa-bell"></i>
                 </span>
-            </ul>
-        </div>
-        <!--小三角，勿删-->
-        <div class="menu-triangle menu-triangle-one triangle"></div>
-        <!--小三角结束，正文开始-->
+                </ul>
+            </div>
+                <!--小三角，勿删-->
+                <div class="menu-triangle menu-triangle-one triangle"></div>
+                <!--小三角结束，正文开始-->
 
-        <div class="all-elements">
-            <div class="activity-holder">
-                <!--上面的那三个按钮-->
-                <div class="activity-btn-holder">
-                    <button class="activity-est activity-btn-selected" id="newestBtn" onclick="activeBtn(this)" active="true">最新</button>
-                    <button class="activity-est activity-btn" id="hotestBtn" onclick="activeBtn(this)" active="false">热门</button>
-                    <button class="activity-new activity-btn" id="addBtn">+ 发布活动</button>
-                </div>
-                <!-- 进入到一个一个活动的部分-->
-                <!-- per-activity 是每一个活动-->
-                <div class="per-activity">
-                    <div class="activity-head-holder">
-                        <h1>操场见！</h1>
-                        <h4><span>58/100</span> 人参与</h4>
-                    </div>
-                    <div class="activity-time-address-holder">
-                        <h1><i class="fa-fa fa-clock-o"></i>3月2日</h1>
-                        <h1><i class="material-icons small-icon">location_on</i>鼓楼操场</h1>
-                    </div>
+                <div class="all-elements">
+                    <div class="activity-holder">
+                        <!--上面的那三个按钮-->
+                        <div class="activity-btn-holder">
+                            <button class="activity-est activity-btn-selected" id="newestBtn" onclick="activeBtn(this)" active="true">最新</button>
+                            <button class="activity-est activity-btn" id="hotestBtn" onclick="activeBtn(this)" active="false">热门</button>
+                            <button class="activity-new activity-btn" id="addBtn" data-toggle="modal" data-target="#myModal">+ 发布活动</button>
+                        </div>
+                        <!-- 进入到一个一个活动的部分-->
+                        <!-- per-activity 是每一个活动-->
+                        <div class="per-activity">
+                            <div class="activity-head-holder">
+                                <h1>操场见！</h1>
+                                <h4><span>58/100</span> 人参与</h4>
+                            </div>
+                            <div class="activity-time-address-holder">
+                                <h1><i class="fa-fa fa-clock-o"></i>3月2日</h1>
+                                <h1><i class="material-icons small-icon">location_on</i>鼓楼操场</h1>
+                            </div>
 
-                    <div class="photo-holder">
+                            <div class="photo-holder">
                         <span class="photo-item">
                              <img src="images/basketball.png">
                              <span class="icover"></span>
                         </span>
-                        <span class="photo-item">
+                                <span class="photo-item">
                              <img src="images/soccer.png">
                              <span class="icover"></span>
                         </span>
-                        <span class="photo-item">
+                                <span class="photo-item">
                              <img src="images/tennis.png">
                             <span class="icover"></span>
                         </span>
+                            </div>
+                            <div class="activity-description">
+                                <p>"好雨知时节，当春乃发生"，周末是难得的晴天，去操场踢球、打球，一起运动吧！</p>
+                            </div>
+                            <div class="per-activity-footer">
+                                <h5 class="per-activity-footer-h5-none text-hide" id="text1">加入他们</h5>
+                                <i class="fa-fa fa-heart-o-grey" onmouseover="changeToColor(this)" onmouseout="changeToGrey(this)" id="1"></i>
+                                <!--onmouseover="changeToColor(this)" onmouseout="changeToGrey(this)" -->
+                                <p>评论</p>
+                            </div>
+                        </div>
+                        <div class="per-activity"></div>
+                        <div class="per-activity"></div>
+                        <div class="per-activity"></div>
                     </div>
-                    <div class="activity-description">
-                        <p>"好雨知时节，当春乃发生"，周末是难得的晴天，去操场踢球、打球，一起运动吧！</p>
-                    </div>
-                    <div class="per-activity-footer">
-                        <h5 class="per-activity-footer-h5-none text-hide" id="text1">加入他们</h5>
-                        <i class="fa-fa fa-heart-o-grey" onmouseover="changeToColor(this)" onmouseout="changeToGrey(this)" id="1"></i>
-                           <!--onmouseover="changeToColor(this)" onmouseout="changeToGrey(this)" -->
-                        <p>评论</p>
-                    </div>
-                </div>
-                <div class="per-activity"></div>
-                <div class="per-activity"></div>
-                <div class="per-activity"></div>
-            </div>
-            <div class="footer">
+                    <div class="footer">
                 <div class="decoration-center"></div>
                 <h1>
                     Copyright &copy; 2016 - 2017 Isports. All Rights Reserved.
@@ -112,6 +109,36 @@
             </div>
         </div>
 
+
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            &times;
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">
+                            Red Roof Hostel
+                        </h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"
+                                    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+                            <form class="form">
+                                <h3 class="title">登录/注册</h3>
+                                <input type="text" id="username" class="form-control" placeholder="用户名" autofocus="autofocus">
+                                <input type="password" id="password" class="form-control" placeholder="密码" >
+                                <div id="alert">用户名</div>
+
+                                <button class="btn btn-lg btn-success btn-block" id="log" type="submit">登录</button>
+                                <button class="btn btn-lg btn-success btn-block" id="sign" type="submit">注册</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </body>
 </html>
