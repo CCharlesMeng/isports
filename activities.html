@@ -21,7 +21,6 @@
         <div class="container" id="navigationBar" role="navigation">
             <ul class="menu">
                 <img src="images/isports-white.png">
-                <li><a href="index.html">首页</a></li>
                 <li class="active"><a href="activities.html">活动</a>
                     <ul class="submenu">
                         <li><a href="activities.html">所有活动</a></li>
@@ -33,7 +32,6 @@
                     <ul class="submenu">
                         <li><a href="#">我的数据</a></li>
                         <li><a href="#">好友PK</a></li>
-                        <li><a href="#">历史数据</a></li>
                     </ul>
                 </li>
                 <li><a href="#">好友</a>
@@ -49,13 +47,13 @@
                     </ul>
                 </li>
                 <span class="big-icon navigation-right-icon">
-                    <i class="material-icons">exit_to_app</i>
+                    <i class="material-icons" onclick="logout()">exit_to_app</i>
                     <i class="fa-middle fa-bell"></i>
                 </span>
             </ul>
         </div>
         <!--小三角，勿删-->
-        <div class="menu-triangle menu-triangle-two triangle"></div>
+        <div class="menu-triangle menu-triangle-one triangle"></div>
         <!--小三角结束，正文开始-->
 
         <div class="all-elements">
@@ -64,7 +62,7 @@
                 <div class="activity-btn-holder">
                     <button class="activity-est activity-btn-selected" id="newestBtn" onclick="activeBtn(this)" active="true">最新</button>
                     <button class="activity-est activity-btn" id="hotestBtn" onclick="activeBtn(this)" active="false">热门</button>
-                    <button class="activity-new activity-btn" id="addBtn">+ 添加活动</button>
+                    <button class="activity-new activity-btn" id="addBtn">+ 发布活动</button>
                 </div>
                 <!-- 进入到一个一个活动的部分-->
                 <!-- per-activity 是每一个活动-->

@@ -7,6 +7,10 @@ $(document).ready(
 
 );
 
+function logout() {
+    window.location.href="index.html";
+}
+
 function changeToColor(btn){
     $("#"+btn.id).removeClass("fa-heart-o-grey");
     $("#"+btn.id).addClass("fa-heart-red");
