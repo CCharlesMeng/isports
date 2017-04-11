@@ -22,11 +22,22 @@
 
 .today table{
     width:100%;
-    height:240px;
+    height:200px;
 }
 
 .today td{
     text-align: center;
+}
+
+.title{
+    text-align: center;
+
+}
+
+.title span{
+    font-size:18px;
+    text-align: center;
+
 }
 
 .onelabel{
@@ -93,6 +104,31 @@
     /*margin-left:65px;*/
     display: block;
 }
+
+.weekreport table{
+    width:100%;
+}
+
+
+
+.oneweek{
+    text-align:center;
+    width: 100%;
+}
+
+.others td{
+    width:25%;
+}
+
+.others table{
+    border-collapse: separate;
+    border-spacing: 0px 20px;
+}
+
+.showright{
+    border-right: 1px solid silver;
+}
+
 
 
 
