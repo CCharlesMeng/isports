@@ -431,6 +431,15 @@ activities
     margin-bottom: 4%;
     height: 300px;
     border: solid #eeeeee 1px;
+    transition: all 0.30s ease-in-out;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+}
+
+.per-activity:hover{
+    box-shadow: 0 0 3px #79BD9A;
+    -webkit-box-shadow: 0 0 3px #79BD9A;
+    -moz-box-shadow: 0 0 3px #79BD9A;
 }
 
 .activity-in {
@@ -440,7 +449,7 @@ activities
 .activity-head-holder {
     position: relative;
     float: left;
-    top: 5%;
+    top: -1%;
     width: 44%;
     padding-left: 5%;
     /*background-color: #88C366;*/
@@ -478,6 +487,7 @@ activities
 }
 
 .activity-time-address-holder h1 {
+    margin-top:0;
     font-size: 14px;
     font-weight: 300;
     line-height: 25px;
@@ -492,7 +502,7 @@ activities
 .photo-holder {
     position: relative;
     float: left;
-    top: 5%;
+    top: 0%;
     left: 5%;
     width: 90%;
     margin-top: 10px;
@@ -537,7 +547,7 @@ activities
 .activity-description {
     position: relative;
     float: left;
-    top: 5%;
+    top: 0%;
     left: 5%;
     width: 90%;
     height: 20%;
@@ -558,7 +568,7 @@ activities
 .per-activity-footer {
     position: relative;
     float: left;
-    top: 8%;
+    top: 3%;
     left: 5%;
     width: 90%;
     height: 8%;
@@ -588,6 +598,26 @@ activities
     /*background-color: #88C366;*/
     animation: mymove 2s 1;
     -webkit-animation: mymove 2s 1; /*Safari and Chrome*/
+}
+
+.per-activity-footer a{
+    position: relative;
+    float: right;
+    width: 20%;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 25px;
+    color:black;
+    /*background-color: gold;*/
+}
+
+.per-activity-footer a:hover{
+    cursor: pointer;
+    color: white;
+    background-color: #DE7E73;;
 }
 
 /*
