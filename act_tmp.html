@@ -145,12 +145,12 @@
                         <div class="row">
                         <h3 class="title2">活动填写</h3>
                         <div class="subtitle">活动名称</div>
-                        <input type="text" class="normal-input input1" id="title" placeholder="活动名称" autofocus="autofocus">
+                        <input type="text" class="normal-input input1" id="title" autofocus="autofocus">
                         <div class="subtitle">活动时间</div>
-                            <div class="input-group date form_date col-md-5 input1" style="float: left;border: 0;height:30px" data-date="" data-date-format="yyyy年m月d日" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
-                                <input class="form-control" id="date" size="16" type="text" value="" readonly>
-                                <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
-                                <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                            <div class="input-group date form_date col-md-5 input1" style="float: left;border: 0;height:30px;background: #f3f3f3" data-date="" data-date-format="yyyy年m月d日" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                <input class="form-control" id="date" style="border:solid 1px #e3e3e3;background: #fafafa" size="16" type="text" value="" readonly>
+                                <span class="input-group-addon" style="border:solid 1px #e3e3e3;background: #f8f8f8"><span class="glyphicon glyphicon-remove"></span></span>
+                                <span class="input-group-addon" style="border:solid 1px #e3e3e3;background: #f8f8f8"><span class="glyphicon glyphicon-calendar"></span></span>
                             </div>
                             <input type="hidden" id="dtp_input2" value="" /><br/>
 
@@ -172,15 +172,15 @@
                                 document.getElementById("date").value=currentdate;
                             </script>
                         <div class="subtitle">活动地点</div>
-                        <input type="text" class="normal-input input1" id="spot" placeholder="活动地点">
+                        <input type="text" class="normal-input input1" id="spot" >
                         <div class="subtitle">活动类型</div>
-                        <input type="text" class="normal-input input1" id="type" placeholder="活动类型">
+                        <input type="text" class="normal-input input1" id="type" >
                         <div class="subtitle">活动人数</div>
-                        <input type="text" class="normal-input input1" id="people" onkeyup="this.value=this.value.replace(/\D/g,'')" placeholder="活动人数">
+                        <input type="text" class="normal-input input1" id="people" onkeyup="this.value=this.value.replace(/\D/g,'')">
                         <div class="subtitle">邀请好友</div>
-                        <input type="text" class="normal-input input1" id="invite" placeholder="邀请好友">
+                        <input type="text" class="normal-input input1" id="invite" >
                         <div class="subtitle">活动描述</div>
-                        <textarea type="text" class="normal-input input2" id="describe" placeholder="活动描述" rows="3"></textarea>
+                        <textarea type="text" class="normal-input input2" id="describe" rows="3"></textarea>
                         </div>
                         <div class="line"></div>
                         <div class="subtitle"></div>
