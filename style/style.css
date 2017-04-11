@@ -437,7 +437,7 @@ activities
     top: 5%;
     width: 44%;
     padding-left: 5%;
-    background-color: #88C366;
+    /*background-color: #88C366;*/
 }
 
 .activity-head-holder h1 {
@@ -465,7 +465,7 @@ activities
     position: relative;
     float: right;
     top: 5%;
-    width: 40%;
+    max-width: 40%;
     padding-right: 5%;
     text-align: left;
     /*background-color: greenyellow;*/
