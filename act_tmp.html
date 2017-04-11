@@ -22,6 +22,7 @@
     <script type="text/javascript" src="time/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"
             integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/p-act.js" charset="UTF-8"></script>
 </head>
 <body>
 <div class="container" id="navigationBar" role="navigation">
@@ -63,7 +64,7 @@
 <!--小三角结束，正文开始-->
 
 <div class="all-elements">
-    <div class="activity-holder">
+    <div class="activity-holder" id="all">
         <!--上面的那三个按钮-->
         <div class="activity-btn-holder">
             <button class="activity-est activity-btn-selected" id="newestBtn" onclick="activeBtn(this)" active="true">最新</button>
@@ -106,9 +107,6 @@
                 <p>评论</p>
             </div>
         </div>
-        <div class="per-activity"></div>
-        <div class="per-activity"></div>
-        <div class="per-activity"></div>
     </div>
     <div class="footer">
         <div class="decoration-center"></div>
@@ -118,12 +116,11 @@
     </div>
 </div>
 
-
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                <button type="button" class="close" data-dismiss="modal" id="close" aria-hidden="true">
                     &times;
                 </button>
                 <h4 class="modal-title" id="myModalLabel">
@@ -135,21 +132,22 @@
                     <div class="column column-1">
                         <ul class="nav nav-pills nav-stacked" role="tablist">
                             <h4 class="title1">活动模板</h4>
-                            <li role="presentation" class="nonactive"><a href="sports.html">个人运动</a></li>
-                            <li role="presentation" class="nonactive"><a href="myactivity.html">我的活动</a></li>
-                            <li role="presentation" class="nonactive"><a href="activity.html">活动列表</a></li>
-                            <li role="presentation" class="nonactive"><a href="blog.html">我的朋友圈</a></li>
-                            <li role="presentation" class="nonactive"><a href="friend.html">朋友圈动态</a></li>
-                            <li role="presentation" class="nonactive"><a href="setting.html">个人设置</a></li>
+                            <li role="presentation" class="nonactive item"><a href="#" class="link1" onclick="model(1)">篮球模板</a></li>
+                            <li role="presentation" class="nonactive item"><a href="#" class="link1" onclick="model(2)">羽毛球模板</a></li>
+                            <li role="presentation" class="nonactive item"><a href="#" class="link1" onclick="model(3)">跑步模板</a></li>
+                            <h4 class="title1">发布过的活动</h4>
+                            <li role="presentation" class="nonactive item"><a href="#" class="link1" onclick="model(4)">篮球活动</a></li>
+                            <li role="presentation" class="nonactive item"><a href="#"class="link1" onclick="model(5)">羽毛球活动</a></li>
+                            <li role="presentation" class="nonactive item"><a href="#" class="link1" onclick="model(6)">跑步活动</a></li>
                         </ul>
                     </div>
                     <div class="column column-2">
                         <div class="row">
                         <h3 class="title2">活动填写</h3>
                         <div class="subtitle">活动名称</div>
-                        <input type="text" class="normal-input input1" placeholder="活动名称" autofocus="autofocus">
+                        <input type="text" class="normal-input input1" id="title" placeholder="活动名称" autofocus="autofocus">
                         <div class="subtitle">活动时间</div>
-                            <div class="input-group date form_date col-md-5 input1" style="float: right;border: 0;height:30px" data-date="" data-date-format="yyyy-mm-dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                            <div class="input-group date form_date col-md-5 input1" style="float: left;border: 0;height:30px" data-date="" data-date-format="yyyy年m月d日" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
                                 <input class="form-control" id="date" size="16" type="text" value="" readonly>
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
@@ -168,42 +166,37 @@
                                     forceParse: 0
                                 });
                                 var date = new Date();
-                                var seperator1 = "-";
                                 var month = date.getMonth() + 1;
                                 var strDate = date.getDate();
-                                if (month >= 1 && month <= 9) {
-                                    month = "0" + month;
-                                }
-                                if (strDate >= 0 && strDate <= 9) {
-                                    strDate = "0" + strDate;
-                                }
-                                var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate;
+                                var currentdate = date.getFullYear() + '年' + month + '月' + strDate+'日';
                                 document.getElementById("date").value=currentdate;
                             </script>
                         <div class="subtitle">活动地点</div>
-                        <input type="text" class="normal-input input1" placeholder="活动地点">
+                        <input type="text" class="normal-input input1" id="spot" placeholder="活动地点">
                         <div class="subtitle">活动类型</div>
-                        <input type="text" class="normal-input input1" placeholder="活动类型">
+                        <input type="text" class="normal-input input1" id="type" placeholder="活动类型">
                         <div class="subtitle">活动人数</div>
-                        <input type="text" class="normal-input input1" onkeyup="this.value=this.value.replace(/\D/g,'')" placeholder="活动人数">
+                        <input type="text" class="normal-input input1" id="people" onkeyup="this.value=this.value.replace(/\D/g,'')" placeholder="活动人数">
                         <div class="subtitle">邀请好友</div>
-                        <input type="text" class="normal-input input1" placeholder="邀请好友">
+                        <input type="text" class="normal-input input1" id="invite" placeholder="邀请好友">
                         <div class="subtitle">活动描述</div>
-                        <textarea type="text" class="normal-input input2" placeholder="活动描述" rows="3"></textarea>
+                        <textarea type="text" class="normal-input input2" id="describe" placeholder="活动描述" rows="3"></textarea>
                         </div>
                         <div class="line"></div>
-                        <button class="normal-button-green button1">清空重填</button>
-                        <button class="normal-button-green button2">确认发布</button>
+                        <div class="subtitle"></div>
+                        <button class="normal-button orange-border-btn button1" onclick="clean()">清空重填</button>
+                        <button class="normal-button green-btn button2" onclick="submit()">确认发布</button>
                     </div>
                     <div class="column column-3">
                         <ul class="nav nav-pills nav-stacked" role="tablist">
-                            <h4 class="title1">活动模板</h4>
-                            <li role="presentation" class="nonactive"><a href="sports.html">个人运动</a></li>
-                            <li role="presentation" class="nonactive"><a href="myactivity.html">我的活动</a></li>
-                            <li role="presentation" class="nonactive"><a href="activity.html">活动列表</a></li>
-                            <li role="presentation" class="nonactive"><a href="blog.html">我的朋友圈</a></li>
-                            <li role="presentation" class="nonactive"><a href="friend.html">朋友圈动态</a></li>
-                            <li role="presentation" class="nonactive"><a href="setting.html">个人设置</a></li>
+                            <h4 class="title1">最近一起运动过</h4>
+                            <li role="presentation" class="nonactive item"><a href="#" class="link" onclick="add(1)">卢海龙</a></li>
+                            <li role="presentation" class="nonactive item"><a href="#" class="link" onclick="add(2)">roastedeggs</a></li>
+                            <li role="presentation" class="nonactive item"><a href="#" class="link" onclick="add(3)">小天使</a></li>
+                            <h4 class="title1">在这里认识的所有人</h4>
+                            <li role="presentation" class="nonactive item"><a href="#" class="link" onclick="add(4)">panda</a></li>
+                            <li role="presentation" class="nonactive item"><a href="#" class="link" onclick="add(5)">charles</a></li>
+                            <li role="presentation" class="nonactive item"><a href="#" class="link" onclick="add(6)">pyk</a></li>
                         </ul>
                     </div>
                 </div>
