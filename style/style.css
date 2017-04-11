@@ -437,13 +437,17 @@ activities
     top: 5%;
     width: 44%;
     padding-left: 5%;
-    /*background-color: #88C366;*/
+    background-color: #88C366;
 }
 
 .activity-head-holder h1 {
     font-size: 19px;
     font-weight: 300;
     line-height: 25px;
+    word-break:keep-all;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;/* 当对象内文本溢出时显示省略标记(...)*/
 }
 
 .activity-head-holder h4 {
@@ -451,16 +455,20 @@ activities
     font-weight: 300;
     line-height: 25px;
     color: grey;
+    word-break:keep-all;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
 }
 
 .activity-time-address-holder {
     position: relative;
     float: right;
     top: 5%;
-    width: 30%;
+    width: 40%;
     padding-right: 5%;
     text-align: left;
-    /*background-color: #88C366;*/
+    /*background-color: greenyellow;*/
 }
 
 .activity-time-address-holder h1 {
@@ -468,6 +476,11 @@ activities
     font-weight: 300;
     line-height: 25px;
     color: grey;
+    word-break:keep-all;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;/* 当对象内文本溢出时显示省略标记(...)*/
+    /*background-color: #99cd99;*/
 }
 
 .photo-holder {
