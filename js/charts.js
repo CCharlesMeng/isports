@@ -202,6 +202,7 @@ function myBarChart(id){
             }
         },
         yAxis: {
+            name:'步数/步'
         },
         series: [{
             name: '步数',
@@ -290,6 +291,7 @@ function historyBarChart(id){
             }
         },
         yAxis: {
+            name:'距离/千米'
         },
         series: [{
             name:'距离',
@@ -349,20 +351,14 @@ function achieveBarChart(id){
     option = {
         title: {
             text: title,
+            subtext:'　　　　　　　　　　　　　12000步达标',
             x:'center'
 
         },
         legend: {
-            data:[
-                {
-                    name:'达标'
-                },
-                {
-                    name:'不达标'
-                }
-            ],
-            top:'30px',
-            x:'center'
+            data:['步数'],
+            top:'27px'
+
         },
         tooltip:{},
         dataZoom: [
@@ -387,9 +383,10 @@ function achieveBarChart(id){
             }
         },
         yAxis: {
+            name:'步数/步'
         },
         series: [{
-
+            name:'步数',
             type: 'bar',
             data: data1,
 
