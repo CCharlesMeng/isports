@@ -14,7 +14,7 @@
     <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
     <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="js/activity.js"></script>
-
+    <script type="text/javascript" src="js/p-act.js"></script>
 
 </head>
 <body>
@@ -97,7 +97,7 @@
                     姓名
                 </div>
                 <div class="source-head">
-                    累计活动数量
+                    运动里程（千米）
                 </div>
                 <div class="source-head">
                     平均得分
@@ -111,13 +111,13 @@
                     小苹果（发起者）
                 </div>
                 <div class="goods-name">
-                    32
+                    3.2
                 </div>
                 <div class="goods-price">
                     3.6
                 </div>
-                <div class="go-shopping">
-                    <input type="text" class="normal-input input1" onkeyup="this.value=this.value.replace(/\D/g,'')" autofocus="autofocus">
+                <div class="go-shopping" id="r1">
+                    <input type="text" class="normal-input input1" id="i1" onkeyup="this.value=this.value.replace(/\D/g,'')" autofocus="autofocus">
                 </div>
             </li>
             <li>
@@ -125,13 +125,13 @@
                     pyk
                 </div>
                 <div class="goods-name">
-                    180
+                    1.8
                 </div>
                 <div class="goods-price">
                     3.6
                 </div>
-                <div class="go-shopping">
-                    <input type="text" class="normal-input input1" onkeyup="this.value=this.value.replace(/\D/g,'')">
+                <div class="go-shopping" id="r2">
+                    <input type="text" class="normal-input input1" id="i2" onkeyup="this.value=this.value.replace(/\D/g,'')">
                 </div>
             </li>
             <li>
@@ -139,13 +139,13 @@
                     panda
                 </div>
                 <div class="goods-name">
-                    130
+                    1.3
                 </div>
                 <div class="goods-price">
                     4
                 </div>
-                <div class="go-shopping">
-                    <input type="text" class="normal-input input1" onkeyup="this.value=this.value.replace(/\D/g,'')">
+                <div class="go-shopping" id="r3">
+                    <input type="text" class="normal-input input1" id="i3" onkeyup="this.value=this.value.replace(/\D/g,'')">
                 </div>
             </li>
             <li>
@@ -153,17 +153,18 @@
                     Charles
                 </div>
                 <div class="goods-name">
-                    90
+                    2.6
                 </div>
                 <div class="goods-price">
                     5
                 </div>
-                <div class="go-shopping">
-                    <input type="text" class="normal-input input1" onkeyup="this.value=this.value.replace(/\D/g,'')">
+                <div class="go-shopping" id="r4">
+                    <input type="text" class="normal-input input1" id="i4" onkeyup="this.value=this.value.replace(/\D/g,'')">
                 </div>
             </li>
 
         </ul>
+        <button class="normal-button green-btn btn1" onclick="add()">提交评分</button>
     </div>
     <!--评论区-->
     <div class="activity-holder">

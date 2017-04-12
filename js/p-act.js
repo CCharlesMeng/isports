@@ -179,3 +179,29 @@ function start(btn){
     per.appendChild(comment);
     all.appendChild(per);
 }
+function  add() {
+    var i1 = document.getElementById("i1").value;
+    document.getElementById("r1").innerHTML='';
+    if(i1!='')
+        document.getElementById("r1").innerText=i1;
+    else
+        document.getElementById("r1").innerText=0;
+    var i2 = document.getElementById("i2").value;
+    document.getElementById("r2").innerHTML='';
+    if(i2!='')
+        document.getElementById("r2").innerText=i2;
+    else
+        document.getElementById("r2").innerText=0;
+    var i3 = document.getElementById("i3").value;
+    document.getElementById("r3").innerHTML='';
+    if(i3!='')
+        document.getElementById("r3").innerText=i3;
+    else
+        document.getElementById("r3").innerText=0;
+    var i4 = document.getElementById("i4").value;
+    document.getElementById("r4").innerHTML='';
+    if(i3!='')
+        document.getElementById("r4").innerText=i4;
+    else
+        document.getElementById("r4").innerText=0;
+}
