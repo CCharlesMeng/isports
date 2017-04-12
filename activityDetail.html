@@ -169,7 +169,7 @@
     <!--评论区-->
     <div class="activity-holder">
         <h4 class="goods-detail-head">评论区</h4>
-        <ul class="goods-compare">
+        <ul class="goods-compare" id="comments">
 
             <li>
                 <div class="per-comment">
@@ -195,7 +195,7 @@
     <!--编写评论区-->
     <div class="activity-holder">
         <h4 class="goods-detail-head">写下自己的评论</h4>
-        <textarea class="normal-input goods-comment"></textarea>
+        <textarea class="normal-input goods-comment" id="comment"></textarea>
         <button class="comment-btn">确认发表</button>
     </div>
 
@@ -207,6 +207,38 @@
         </h1>
     </div>
 </div>
+
+<script>
+    function appendaskComment(text){
+        var onecomment = $('<li><div class="per-comment"><h6>[<a>运动健将</a>] pyk  </span><span> 2017.4.11. 18:29</span> </h6> <p>'+text+' </p> </div></li>');
+        $('#comments').append(onecomment);
+
+    }
+    function appendanswerComment(text){
+        var onecomment = $('<li><div class="per-comment"><h6>[<a>正在路上</a>] 小苹果  </span><span> 2017.4.11. 18:29</span> </h6> <p>'+text+' </p> </div></li>');
+        $('#comments').append(onecomment);
+
+    }
+    $(document).ready(function(){
+        var count = 0;
+        $('.comment-btn').click(function(){
+            count++;
+            var text = $('#comment').val();
+            if(text.length>0){
+                if(count%2==1){
+                    appendaskComment(text);
+                }else{
+                    appendanswerComment(text);
+                }
+
+                $('#comment').val('');
+            }
+
+
+
+        });
+    });
+</script>
 
 
 </body>
