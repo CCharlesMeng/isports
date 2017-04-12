@@ -185,7 +185,10 @@ function myBarChart(id){
     option = {
         title: {
             text: title,
-            x:'center'
+            x:'center',
+            textStyle:{
+                fontWeight:300
+            }
 
         },
         legend: {
@@ -210,7 +213,7 @@ function myBarChart(id){
             data: data1,
             itemStyle:{
                 normal:{
-                    color:'#6667c9'
+                    color:'#DE7E73'
                 }
             },
             animationDelay: function (idx) {
@@ -394,7 +397,7 @@ function achieveBarChart(id){
                 normal:{
                     color:function(params){
                         if(params.data>=12000){
-                            return '#F7BC05'
+                            return '#DE7E73'
                         }else{
                             return '#ADAAA7'
                         }
