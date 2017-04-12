@@ -85,8 +85,9 @@ label {
 
 .green-btn:hover {
     /*color: #99cd99;*/
-    border: solid 1px #84cca7;
-    background-color: #84cca7;
+    /*border: solid 1px #84cca7;*/
+    border: solid 1px rgba(132, 204, 167, 0.78);
+    background-color: rgba(132, 204, 167, 0.78);
     color: #45ab56;
 }
 
@@ -422,6 +423,14 @@ activities
     background-color: #DE7E73;
 }
 
+.green-bg{
+    background-color: rgba(122, 205, 153, 0.38);
+}
+
+.orange-bg{
+    background-color: rgba(222, 159, 147, 0.38);
+}
+
 .per-activity {
     position: relative;
     float: left;
@@ -434,6 +443,8 @@ activities
     transition: all 0.30s ease-in-out;
     -webkit-transition: all 0.30s ease-in-out;
     -moz-transition: all 0.30s ease-in-out;
+
+    /*background-color: rgba(153, 205, 153, 0.3);*/
 }
 
 .per-activity:hover{
@@ -446,11 +457,17 @@ activities
     background-color: rgba(192, 255, 192, 0.35);
 }
 
+.activity-builder{
+    font-size: 12px;
+    font-weight: 300;
+    color:grey;
+}
+
 .activity-head-holder {
     position: relative;
     float: left;
     top: -1%;
-    width: 44%;
+    width: 55%;
     padding-left: 5%;
     /*background-color: #88C366;*/
 }
