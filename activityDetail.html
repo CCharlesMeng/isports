@@ -171,25 +171,25 @@
         <h4 class="goods-detail-head">评论区</h4>
         <ul class="goods-compare" id="comments">
 
-            <li>
-                <div class="per-comment">
-                    <h6>[<a>正在路上</a>] 小苹果  </span><span> 2017.4.11. 18:31</span></h6>
-                    <p>
-                        谢天谢地有人来参加啦！那我们就下午3点半在操场见吧！
-                    </p>
-                </div>
+            <!--<li>-->
+                <!--<div class="per-comment">-->
+                    <!--<h6>[<a>正在路上</a>] 小苹果  </span><span> 2017.4.11 18:31</span></h6>-->
+                    <!--<p>-->
+                        <!--谢天谢地有人来参加啦！那我们就下午3点半在操场见吧！-->
+                    <!--</p>-->
+                <!--</div>-->
 
-            </li>
-            <li>
-                <div class="per-comment">
-                    <h6>[<a>运动健将</a>] pyk  </span><span> 2017.4.11. 18:29</span>
-                    </h6>
-                    <p>
-                        咱们具体几点开始啊？
-                    </p>
-                </div>
+            <!--</li>-->
+            <!--<li>-->
+                <!--<div class="per-comment">-->
+                    <!--<h6>[<a>运动健将</a>] pyk  </span><span> 2017.4.11 18:29</span>-->
+                    <!--</h6>-->
+                    <!--<p>-->
+                        <!--咱们具体几点开始啊？-->
+                    <!--</p>-->
+                <!--</div>-->
 
-            </li>
+            <!--</li>-->
         </ul>
     </div>
     <!--编写评论区-->
@@ -209,26 +209,50 @@
 </div>
 
 <script>
-    function appendaskComment(text){
-        var onecomment = $('<li><div class="per-comment"><h6>[<a>运动健将</a>] pyk  </span><span> 2017.4.11. 18:29</span> </h6> <p>'+text+' </p> </div></li>');
+    function appendaskComment(text,time,id){
+        var onecomment = $('<li id='+id+'><div class="per-comment"><h6>[<a>运动健将</a>] pyk  </span><span>'+time+'</span> </h6> <p>'+text+' </p> </div></li>');
         $('#comments').append(onecomment);
+        onecomment.hide().fadeIn(1000);
 
     }
-    function appendanswerComment(text){
-        var onecomment = $('<li><div class="per-comment"><h6>[<a>正在路上</a>] 小苹果  </span><span> 2017.4.11. 18:29</span> </h6> <p>'+text+' </p> </div></li>');
+    function appendanswerComment(text,time,id){
+        var onecomment = $('<li id='+id+'><div class="per-comment"><h6>[<a>正在路上</a>] 小苹果  </span><span>'+time+'</span> </h6> <p>'+text+' </p> </div></li>');
         $('#comments').append(onecomment);
+        onecomment.hide().fadeIn(1000);
 
+    }
+
+    function p(s) {
+        return s < 10 ? '0' + s: s;
+    }
+
+    function getDate(){
+        var myDate = new Date();
+        //获取当前年
+        var year=myDate.getFullYear();
+        //获取当前月
+        var month=myDate.getMonth()+1;
+        //获取当前日
+        var date=myDate.getDate();
+        var h=myDate.getHours();       //获取当前小时数(0-23)
+        var m=myDate.getMinutes();     //获取当前分钟数(0-59)
+        var s=myDate.getSeconds();
+
+        var now=year+'.'+p(month)+"."+p(date)+" "+p(h)+':'+p(m)+':'+p(s);
+        return now;
     }
     $(document).ready(function(){
         var count = 0;
         $('.comment-btn').click(function(){
             count++;
             var text = $('#comment').val();
+            var time = getDate();
+            var id = 'comment'+count
             if(text.length>0){
                 if(count%2==1){
-                    appendaskComment(text);
+                    appendaskComment(text,time,id);
                 }else{
-                    appendanswerComment(text);
+                    appendanswerComment(text,time,id);
                 }
 
                 $('#comment').val('');
