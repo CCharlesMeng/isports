@@ -8,11 +8,20 @@
         <link href="style/style.css" rel="stylesheet" type="text/css" />
         <link href="style/material-icons.css" rel="stylesheet" type="text/css" />
         <link href="style/font-awesome.css" rel="stylesheet" type="text/css" />
+
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <link href="style/p-act.css" rel="stylesheet" type="text/css" />
+
         <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
         <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
         <script type="text/javascript" src="js/activity.js"></script>
+
+        <script type="text/javascript" src="time/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+        <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="js/p-act.js" charset="UTF-8"></script>
     </head>
     <body>
         <div class="container" id="navigationBar" role="navigation">
@@ -54,7 +63,7 @@
                 <!--小三角结束，正文开始-->
 
                 <div class="all-elements">
-                    <div class="activity-holder">
+                    <div class="activity-holder" id="all">
                         <!--上面的那三个按钮-->
                         <div class="activity-btn-holder">
                             <button class="activity-est activity-btn-selected" id="newestBtn" onclick="activeBtn(this)" active="true">最新</button>
@@ -97,9 +106,6 @@
                                 <a>查看详情</a>
                             </div>
                         </div>
-                        <div class="per-activity"></div>
-                        <div class="per-activity"></div>
-                        <div class="per-activity"></div>
                     </div>
                     <div class="footer">
                 <div class="decoration-center"></div>
@@ -109,7 +115,94 @@
             </div>
         </div>
 
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" id="close" aria-hidden="true">
+                            &times;
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">
+                            新建活动
+                        </h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="column column-1">
+                                <ul class="nav nav-pills nav-stacked" role="tablist">
+                                    <h4 class="title1">活动模板</h4>
+                                    <li role="presentation" class="nonactive item"><a href="#" class="link1" onclick="model(1)">篮球模板</a></li>
+                                    <li role="presentation" class="nonactive item"><a href="#" class="link1" onclick="model(2)">羽毛球模板</a></li>
+                                    <li role="presentation" class="nonactive item"><a href="#" class="link1" onclick="model(3)">跑步模板</a></li>
+                                    <h4 class="title1">发布过的活动</h4>
+                                    <li role="presentation" class="nonactive item"><a href="#" class="link1" onclick="model(4)">篮球活动</a></li>
+                                    <li role="presentation" class="nonactive item"><a href="#"class="link1" onclick="model(5)">羽毛球活动</a></li>
+                                    <li role="presentation" class="nonactive item"><a href="#" class="link1" onclick="model(6)">跑步活动</a></li>
+                                </ul>
+                            </div>
+                            <div class="column column-2">
+                                <div class="row">
+                                    <h3 class="title2">活动填写</h3>
+                                    <div class="subtitle">活动名称</div>
+                                    <input type="text" class="normal-input input1" id="title" autofocus="autofocus">
+                                    <div class="subtitle">活动时间</div>
+                                    <div class="input-group date form_date col-md-5 input1" style="float: left;border: 0;height:30px;background: #f3f3f3" data-date="" data-date-format="yyyy年m月d日" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                        <input class="form-control" id="date" style="border:solid 1px #e3e3e3;background: #fafafa" size="16" type="text" value="" readonly>
+                                        <span class="input-group-addon" style="border:solid 1px #e3e3e3;background: #f8f8f8"><span class="glyphicon glyphicon-remove"></span></span>
+                                        <span class="input-group-addon" style="border:solid 1px #e3e3e3;background: #f8f8f8"><span class="glyphicon glyphicon-calendar"></span></span>
+                                    </div>
+                                    <input type="hidden" id="dtp_input2" value="" /><br/>
 
+                                    <script type="text/javascript">
+                                        $('.form_date').datetimepicker({
+                                            language: 'zh-CN',
+                                            weekStart: 7,
+                                            todayBtn:  1,
+                                            autoclose: 1,
+                                            todayHighlight: 100,
+                                            startView: 2,
+                                            minView: 2,
+                                            forceParse: 0
+                                        });
+                                        var date = new Date();
+                                        var month = date.getMonth() + 1;
+                                        var strDate = date.getDate();
+                                        var currentdate = date.getFullYear() + '年' + month + '月' + strDate+'日';
+                                        document.getElementById("date").value=currentdate;
+                                    </script>
+                                    <div class="subtitle">活动地点</div>
+                                    <input type="text" class="normal-input input1" id="spot" >
+                                    <div class="subtitle">活动类型</div>
+                                    <input type="text" class="normal-input input1" id="type" >
+                                    <div class="subtitle">活动人数</div>
+                                    <input type="text" class="normal-input input1" id="people" onkeyup="this.value=this.value.replace(/\D/g,'')">
+                                    <div class="subtitle">邀请好友</div>
+                                    <input type="text" class="normal-input input1" id="invite" >
+                                    <div class="subtitle">活动描述</div>
+                                    <textarea type="text" class="normal-input input2" id="describe" rows="3"></textarea>
+                                </div>
+                                <div class="line"></div>
+                                <div class="subtitle"></div>
+                                <button class="normal-button orange-border-btn button1" onclick="clean()">清空重填</button>
+                                <button class="normal-button green-btn button2" onclick="submit()">确认发布</button>
+                            </div>
+                            <div class="column column-3">
+                                <ul class="nav nav-pills nav-stacked" role="tablist">
+                                    <h4 class="title1">最近一起运动过</h4>
+                                    <li role="presentation" class="nonactive item"><a href="#" class="link" onclick="add(1)">卢海龙</a></li>
+                                    <li role="presentation" class="nonactive item"><a href="#" class="link" onclick="add(2)">roastedeggs</a></li>
+                                    <li role="presentation" class="nonactive item"><a href="#" class="link" onclick="add(3)">小天使</a></li>
+                                    <h4 class="title1">在这里认识的所有人</h4>
+                                    <li role="presentation" class="nonactive item"><a href="#" class="link" onclick="add(4)">panda</a></li>
+                                    <li role="presentation" class="nonactive item"><a href="#" class="link" onclick="add(5)">charles</a></li>
+                                    <li role="presentation" class="nonactive item"><a href="#" class="link" onclick="add(6)">pyk</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </body>
 </html>

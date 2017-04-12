@@ -87,7 +87,7 @@ function submit(){
     var comment = document.createElement("div");
     comment.setAttribute("class","per-activity-footer");
     comment.innerHTML="<h5 class='per-activity-footer-h5-none text-hide' >加入他们</h5>"+
-    "<i class='fa-fa fa-heart-o-grey' onmouseover='changeToColor(this)' onmouseout='changeToGrey(this)' ></i><p>评论</p>";
+    "<a>查看详情</a>";
     per.appendChild(comment);
     var c = all.children;
     all.insertBefore(per,c[1]);
