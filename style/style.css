@@ -166,13 +166,14 @@ label {
 }
 
 .normal-tag {
-    width: 30px;
+    /*width: 30px;*/
     height: 24px;
     border-radius: 0 7px 7px 0;
     background-color: rgba(128, 128, 128, 0.50);
     color: white;
     font-size: 12px;
     padding-left: 12px;
+    padding-right: 8px;
     line-height: 24px;
     transition: all 0.30s ease-in-out;
     -webkit-transition: all 0.30s ease-in-out;
@@ -725,10 +726,12 @@ activities
     width: 90%;
     padding: 30px 0 30px 0;
     /*height: 100%;*/
-    margin-bottom: 0%;
+    margin-bottom: 0;
     margin-left: 0;
     border: solid #eeeeee 1px;
     background-color: white;
+    /*background-color: greenyellow;*/
+
 }
 
 .full-width-holder-img{
@@ -740,12 +743,45 @@ activities
     border-radius: 50%;
 }
 
+.green-text{
+    font-size: 15px;
+    color:#79BD9A;
+}
+
 .full-width-holder h1{
+    position: relative;
+    display: block;
     float: left;
     left: 10%;
     top:15%;
+    margin-top: 0%;
     font-size: 30px;
     font-weight: 400;
+    /*background-color: goldenrod;*/
+    /*width: 10%;*/
+}
+
+.full-width-holder h3{
+    position: relative;
+    float: left;
+    left: 0%;
+    top:30%;
+    margin-top: 2%;
+    font-size: 14px;
+    font-weight: 300;
+    /*background-color: goldenrod;*/
+    /*width: 10%;*/
+}
+
+.full-width-holder h4{
+    position: relative;
+    float: left;
+    left: 3%;
+    width: 18%;
+    margin-top: 0.5%;
+    margin-right: 2%;
+    font-size: 14px;
+    font-weight: 300;
     /*background-color: goldenrod;*/
     /*width: 10%;*/
 }
@@ -753,11 +789,20 @@ activities
 .full-width-holder h6{
     float: right;
     right: 10%;
-    top:15%;
+    margin-top: -1.5%;
+    margin-bottom: 2.5%;
     font-size: 16px;
     font-weight: 300;
     margin-right: 3%;
     /*background-color: greenyellow;*/
+}
+
+.full-width-holder a{
+    float: left;
+    left: -10%;
+    top:10%;
+    margin-top: 8.5%;
+    margin-right: 2%;
 }
 
 .echart-div{
@@ -765,26 +810,27 @@ activities
     float: left;
     top:40%;
     width: 100%;
-    height: 600px;
+    height: 400px;
     padding-top: 3%;
     background-color: white;
-    border-top: solid 1px #eeeeee;
-    border-bottom: solid 1px #eeeeee;
+    /*border-top: solid 1px #eeeeee;*/
+    /*border-bottom: solid 1px #eeeeee;*/
 }
 
 .honor-div{
     float: left;
-    width: 19.5%;
+    width: 24.9%;
     height: 230px;
     border-right: solid 1px #eeeeee;
+    border-bottom: solid 1px #eeeeee;
     background-color: white;
 }
 
 .honor-div img{
-    top:10%;
-    left: 10%;
+    top:20%;
+    left: 25%;
     float: left;
-    width: 80%;
+    width: 50%;
     transition: 0.5s;
     -webkit-transition: 0.5s; /* Safari */
     -ms-transition: 0.5s;
@@ -792,9 +838,9 @@ activities
 }
 
 .honor-div img:hover{
-    top:1%;
-    left: 1%;
-   width: 98%;
+    top:15%;
+    left: 20%;
+   width: 60%;
 }
 
 .big-num{
