@@ -96,3 +96,86 @@ function submit(){
     btn.click();
     clean();
 }
+
+function finish(btn){
+    activeBtn(btn);
+    var all = document.getElementById("all");
+    var ch = all.children;
+    for(var j = 1;j<2;j++){
+        all.removeChild(ch[j]);
+    }
+    var arr=["灌篮高手","羽毛球活动","奔跑吧兄弟"];
+    for(var i = 0;i<3;i++) {
+        var per = document.createElement("div");
+        per.setAttribute("class", "per-activity");
+        var head = document.createElement("div");
+        head.setAttribute("class", "activity-head-holder");
+        head.innerHTML = "<h1>"+arr[i]+"</h1><h4><span>10/12</span> 人参与</h4>";
+        per.appendChild(head);
+
+        var address = document.createElement("div");
+        address.setAttribute("class", "activity-time-address-holder");
+        var a = 10 + i;
+        address.innerHTML = "<h1><i class='fa-fa fa-clock-o'></i>3月"+a+"日</h1>" +
+            "<h1><i class='material-icons small-icon'>location_on</i>" + "鼓楼校区" + "</h1> ";
+        per.appendChild(address);
+
+        var photo = document.createElement("div");
+        photo.setAttribute("class", "photo-holder");
+        photo.innerHTML = "<span class='photo-item'> <img src='images/basketball.png'> <span class='icover'></span> </span>" +
+            "<span class='photo-item'> <img src='images/soccer.png'> <span class='icover'></span> </span>" +
+            "<span class='photo-item'> <img src='images/tennis.png'> <span class='icover'></span> </span> ";
+        per.appendChild(photo);
+
+        var activity = document.createElement("div");
+        activity.setAttribute("class", "activity-description");
+        activity.innerHTML = "<p>" + "\"好雨知时节，当春乃发生\"，周末是难得的晴天，去操场打球，一起运动吧！" + "</p>";
+        per.appendChild(activity);
+
+        var comment = document.createElement("div");
+        comment.setAttribute("class", "per-activity-footer");
+        comment.innerHTML = "<h5 class='per-activity-footer-h5-none text-hide' >评分</h5>" +
+            "<a>评分</a>";
+        per.appendChild(comment);
+        all.appendChild(per);
+    }
+}
+function start(btn){
+    activeBtn(btn);
+    var all = document.getElementById("all");
+    var ch = all.children;
+    for(var j = 3;j>=1;j--){
+        all.removeChild(ch[j]);
+    }
+    var per = document.createElement("div");
+    per.setAttribute("class", "per-activity");
+    var head = document.createElement("div");
+    head.setAttribute("class", "activity-head-holder");
+    head.innerHTML = "<h1>操场见!</h1><h4><span>58/100</span> 人参与</h4>";
+    per.appendChild(head);
+
+    var address = document.createElement("div");
+    address.setAttribute("class", "activity-time-address-holder");
+    address.innerHTML = "<h1><i class='fa-fa fa-clock-o'></i>4月20日</h1>" +
+        "<h1><i class='material-icons small-icon'>location_on</i>" + "鼓楼操场" + "</h1> ";
+    per.appendChild(address);
+
+    var photo = document.createElement("div");
+    photo.setAttribute("class", "photo-holder");
+    photo.innerHTML = "<span class='photo-item'> <img src='images/basketball.png'> <span class='icover'></span> </span>" +
+        "<span class='photo-item'> <img src='images/soccer.png'> <span class='icover'></span> </span>" +
+        "<span class='photo-item'> <img src='images/tennis.png'> <span class='icover'></span> </span> ";
+    per.appendChild(photo);
+
+    var activity = document.createElement("div");
+    activity.setAttribute("class", "activity-description");
+    activity.innerHTML = "<p>" + "\"好雨知时节，当春乃发生\"，周末是难得的晴天，去操场踢球、打球，一起运动吧！" + "</p>";
+    per.appendChild(activity);
+
+    var comment = document.createElement("div");
+    comment.setAttribute("class", "per-activity-footer");
+    comment.innerHTML = "<h5 class='per-activity-footer-h5-none text-hide' >评分</h5>" +
+        "<a>评分</a>";
+    per.appendChild(comment);
+    all.appendChild(per);
+}
