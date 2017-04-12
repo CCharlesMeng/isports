@@ -1083,3 +1083,6 @@ activities
     font-weight: 400;
     color: #79BD9A;
 }
+.input1{
+    width: 50%;height: 20px;margin-left: 40px;border: solid 1px #e3e3e3;
+}

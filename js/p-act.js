@@ -87,7 +87,7 @@ function submit(){
     var comment = document.createElement("div");
     comment.setAttribute("class","per-activity-footer");
     comment.innerHTML="<h5 class='per-activity-footer-h5-none text-hide' >加入他们</h5>"+
-    "<a>查看详情</a>";
+    "<a href='activityDetail.html'>查看详情</a>";
     per.appendChild(comment);
     var c = all.children;
     all.insertBefore(per,c[1]);
@@ -110,7 +110,7 @@ function finish(btn){
         per.setAttribute("class", "per-activity");
         var head = document.createElement("div");
         head.setAttribute("class", "activity-head-holder");
-        head.innerHTML = "<h1>"+arr[i]+"</h1><h4><span>10/12</span> 人参与</h4>";
+        head.innerHTML = "<h1 style='color: #DE7E73'>"+arr[i]+"</h1><h4><span>10/12</span> 人参与</h4>";
         per.appendChild(head);
 
         var address = document.createElement("div");
@@ -135,7 +135,7 @@ function finish(btn){
         var comment = document.createElement("div");
         comment.setAttribute("class", "per-activity-footer");
         comment.innerHTML = "<h5 class='per-activity-footer-h5-none text-hide' >评分</h5>" +
-            "<a>评分</a>";
+            "<a href='activityComment.html'>评分</a>";
         per.appendChild(comment);
         all.appendChild(per);
     }
@@ -175,7 +175,7 @@ function start(btn){
     var comment = document.createElement("div");
     comment.setAttribute("class", "per-activity-footer");
     comment.innerHTML = "<h5 class='per-activity-footer-h5-none text-hide' >评分</h5>" +
-        "<a>评分</a>";
+        "<a href='activityDetail.html'>评分</a>";
     per.appendChild(comment);
     all.appendChild(per);
 }
