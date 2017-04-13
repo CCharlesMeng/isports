@@ -204,4 +204,6 @@ function  add() {
         document.getElementById("r4").innerText=i4;
     else
         document.getElementById("r4").innerText=0;
+    var comment = document.getElementById("comment");
+    comment.style.display="none";
 }

@@ -9,13 +9,14 @@
     <link href="style/styles.css" rel="stylesheet" type="text/css"/>
     <link href="style/material-icons.css" rel="stylesheet" type="text/css"/>
     <link href="style/font-awesome.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="notify/css/bootstrap-notify.css" type="text/css">
     <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
     <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="js/activity.js"></script>
     <script type="text/javascript" src="js/p-act.js"></script>
-
+    <script type="text/javascript" src="notify/js/bootstrap-notify.js"></script>
 </head>
 <body>
 <div class="container" id="navigationBar" role="navigation">
@@ -162,7 +163,7 @@
             </li>
 
         </ul>
-        <button class="normal-button green-btn btn1" onclick="add()">提交评分</button>
+        <button class="normal-button green-btn btn1" id="comment" onclick="add()">提交评分</button>
     </div>
     <!--评论区-->
     <div class="activity-holder">
