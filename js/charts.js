@@ -303,7 +303,7 @@ function historyBarChart(id){
 
             itemStyle:{
                 normal:{
-                    color:'#FB6522'
+                    color:'#DE7E73'
 
                 }
             },
