@@ -179,7 +179,7 @@ function start(btn){
     per.appendChild(comment);
     all.appendChild(per);
 }
-function  add() {
+function  comm() {
     var i1 = document.getElementById("i1").value;
     document.getElementById("r1").innerHTML='';
     if(i1!='')
