@@ -198,12 +198,6 @@ function  comm() {
         document.getElementById("r3").innerText=i3;
     else
         document.getElementById("r3").innerText=0;
-    var i4 = document.getElementById("i4").value;
-    document.getElementById("r4").innerHTML='';
-    if(i3!='')
-        document.getElementById("r4").innerText=i4;
-    else
-        document.getElementById("r4").innerText=0;
     var comment = document.getElementById("comment");
     comment.style.display="none";
 }
