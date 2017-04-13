@@ -32,11 +32,11 @@
         <div class="login-right">
             <img class="login-logo" src="images/logoV2.png">
             <input type="text" placeholder="用户名">
-            <input type="text" placeholder="密码">
+            <input type="password" placeholder="密码">
             <div class="login-under-input">
-                <!--<input type="checkbox">-->
+                <input type="checkbox">
             </div>
-            <button>登录</button>
+            <button onclick="toActivities()">登录</button>
         </div>
     </div>
 
@@ -49,6 +49,11 @@
     </div>
 </div>
 
+<script>
+    function toActivities() {
+        window.location.href="activities.html"
+    }
+</script>
 </body>
 
 </html>
